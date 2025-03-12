@@ -3,17 +3,20 @@
 namespace App\Filament\App\Resources\ComplaintResource\Pages;
 
 use App\Filament\App\Resources\ComplaintResource;
+use App\Filament\CreateRecordAndRedirectToIndex;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditComplaint extends EditRecord
+class EditComplaint extends CreateRecordAndRedirectToIndex
 {
     protected static string $resource = ComplaintResource::class;
+
+
 
     protected function getHeaderActions(): array
     {
         return [
-            Actions\DeleteAction::make(),
+            // Actions\DeleteAction::make(),
         ];
     }
 }
