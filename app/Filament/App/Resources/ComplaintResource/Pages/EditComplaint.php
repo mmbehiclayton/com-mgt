@@ -7,9 +7,14 @@ use App\Filament\CreateRecordAndRedirectToIndex;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditComplaint extends CreateRecordAndRedirectToIndex
+class EditComplaint extends EditRecord
 {
     protected static string $resource = ComplaintResource::class;
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::geUrl('index');
+    }
 
 
 
