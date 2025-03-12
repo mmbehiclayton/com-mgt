@@ -123,4 +123,12 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+
+//    'providers' => [
+//     // Other providers...
+//     App\Providers\CustomSidebarProvider::class,
+//     Illuminate\View\ViewServiceProvider::class,
+//     Illuminate\Filesystem\FilesystemServiceProvider::class,
+//     ],
+
 ];

@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -21,7 +20,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'is_admin', // Add this
+        'is_admin', // Keep this for mass assignment
     ];
 
     /**
@@ -44,9 +43,23 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'is_admin' => 'boolean', // Cast is_admin to boolean
         ];
     }
 
+    /**
+     * Get the is_admin attribute.
+     *
+     * @return bool
+     */
+    public function getIsAdminAttribute(): bool
+    {
+        return $this->role === 'admin'; // Adjust according to your role setup
+    }
+
+    /**
+     * Define relationship with Complaint.
+     */
     public function complaints()
     {
         return $this->hasMany(Complaint::class);

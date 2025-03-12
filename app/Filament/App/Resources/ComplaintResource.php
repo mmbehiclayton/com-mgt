@@ -49,7 +49,7 @@ class ComplaintResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('user.name')->label('Student'),
+                Tables\Columns\TextColumn::make('user.name')->label('Complainant'),
                 Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('status')
                     ->badge()
