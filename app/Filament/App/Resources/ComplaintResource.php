@@ -12,7 +12,7 @@ use Filament\Tables\Table;
 use Filament\Tables\Actions;
 use Filament\Tables\Filters;
 use Illuminate\Database\Eloquent\Builder;
-use Filament\Resources\Components\Tab;
+
 
 class ComplaintResource extends Resource
 {
@@ -101,6 +101,7 @@ class ComplaintResource extends Resource
     {
         return [];
     }
+
 
     public static function getPages(): array
     {

@@ -124,11 +124,6 @@ return [
     ],
 
 
-//    'providers' => [
-//     // Other providers...
-//     App\Providers\CustomSidebarProvider::class,
-//     Illuminate\View\ViewServiceProvider::class,
-//     Illuminate\Filesystem\FilesystemServiceProvider::class,
-//     ],
+
 
 ];

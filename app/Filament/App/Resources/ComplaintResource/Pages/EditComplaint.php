@@ -11,10 +11,10 @@ class EditComplaint extends EditRecord
 {
     protected static string $resource = ComplaintResource::class;
 
-    protected function getRedirectUrl(): string
-    {
-        return $this->getResource()::geUrl('index');
-    }
+    // protected function getRedirectUrl(): string
+    // {
+    //     return $this->getResource()::getUrl('index');
+    // }
 
 
 

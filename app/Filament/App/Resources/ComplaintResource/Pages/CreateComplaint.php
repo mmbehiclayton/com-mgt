@@ -3,8 +3,7 @@
 namespace App\Filament\App\Resources\ComplaintResource\Pages;
 
 use App\Filament\App\Resources\ComplaintResource;
-use App\Filament\CreateRecordAndRedirectToIndex;
-use Filament\Actions;
+
 use Filament\Resources\Pages\CreateRecord;
 
 class CreateComplaint extends CreateRecord
@@ -13,7 +12,10 @@ class CreateComplaint extends CreateRecord
 
     protected function getRedirectUrl(): string
     {
-        return $this->getResource()::geUrl('index');
+        return $this->getResource()::getUrl('index');
     }
+
+
+
 
 }

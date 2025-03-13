@@ -52,10 +52,7 @@ class User extends Authenticatable
      *
      * @return bool
      */
-    public function getIsAdminAttribute(): bool
-    {
-        return $this->role === 'admin'; // Adjust according to your role setup
-    }
+
 
     /**
      * Define relationship with Complaint.
@@ -64,4 +61,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Complaint::class);
     }
+
+
+
 }
